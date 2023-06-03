@@ -1,6 +1,7 @@
 import './App.css'
 import {Route, Routes } from "react-router-dom";
 import DashboardPage from "./DashboardPage.jsx";
+import DetailPage from "./DetailPage.jsx";
 
 function App() {
   return(
@@ -8,7 +9,11 @@ function App() {
       <Routes>
         <Route
           element={<DashboardPage />}
-          path="/dashboard"
+          path="/"
+        />
+        <Route
+          element={<DetailPage />}
+          path="/bio/:characterid"
         />
       </Routes>
     </>

@@ -13,6 +13,29 @@ const Character__GetCharacters = gql `
     }
   }
 `
+
+const Character__GetCharacterDetails = gql `
+  query getCharacterDetails($id: ID!) {
+    character(id: $id) {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+        type
+        dimension
+        created
+      }
+      image
+    }
+  }
+`
+
 export {
-  Character__GetCharacters
+  Character__GetCharacters,
+  Character__GetCharacterDetails
 }
